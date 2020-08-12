@@ -1,0 +1,34 @@
+<div class="container bg-light text-xs-center">
+    <div class="row " style="padding: 20px;">
+        <a routerLinkActive="active" routerLink="/main">Back</a>
+        <div class="container">
+            <h2>Add Customer Details</h2>            
+            <form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm" novalidate>
+                <div class="form-group">
+                    <label for="customerName">Customer Name</label>
+                    <input type="text" class="form-control" name="customerName" [(ngModel)]="model.customerName" #customerName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && customerName.invalid }" required />
+                    <div *ngIf="f.submitted && customerName.invalid" class="invalid-feedback">
+                        <div *ngIf="customerName.errors.required">Customer Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" name="age" [(ngModel)]="model.age" #age="ngModel" [ngClass]="{ 'is-invalid': f.submitted && age.invalid }" required />
+                    <div *ngIf="f.submitted && age.invalid" class="invalid-feedback">
+                        <div *ngIf="age.errors.required">Last Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea type="text" class="form-control" name="address" [(ngModel)]="model.address" #address="ngModel" [ngClass]="{ 'is-invalid': f.submitted && address.invalid }" required></textarea>
+                    <div *ngIf="f.submitted && address.invalid" class="invalid-feedback">
+                        <div *ngIf="address.errors.required">Address is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+          </div>
+    </div>
+</div>
