@@ -1,0 +1,26 @@
+<div class="container bg-light text-xs-center">
+    <div class="row " style="padding: 20px;">
+        <a routerLinkActive="active" routerLink="/main">Back</a>
+        <div class="container">
+            <h2>View Customer Details</h2>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Customer</th>
+                    <th>Order Date</th>
+                    <th>Order Detail</th>
+                    <th>Order Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let detail of orderdetails">
+                    <td>{{ detail.customer }}</td>
+                    <td>{{ detail.orderdate }}</td>
+                    <td>{{ detail.orderdetail }}</td>
+                    <td>{{ detail.orderamount }}</td>
+                  </tr>                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
