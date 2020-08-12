@@ -1,0 +1,32 @@
+[
+    {
+        "customer" : "Anna Bosh",
+        "orderdate" : "Nov 14, 1974",
+        "orderdetail" : "Bags, Paper, Fruits",
+        "orderamount" : "$24.00"
+    },
+    {
+        "customer" : "John Keen",
+        "orderdate" : "Dec 20, 1980",
+        "orderdetail" : "Stationery, PC, Drinks",
+        "orderamount" : "$23"
+    },
+    {
+        "customer" : "Marin Miller",
+        "orderdate" : "May 13, 1984",
+        "orderdetail" : "Laptop, Chair, TV",
+        "orderamount" : "$46.98"
+    },
+    {
+        "customer" : "Nick Somon",
+        "orderdate" : "Aug 13, 2001",
+        "orderdetail" : "Bottle, Phone",
+        "orderamount" : "$34.66"
+    },
+    {
+        "customer" : "Sam Query",
+        "orderdate" : "Jan 13, 1995",
+        "orderdetail" : "Pencil, Dolls",
+        "orderamount" : "$24"
+    }     
+]
