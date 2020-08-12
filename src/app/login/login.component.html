@@ -1,0 +1,34 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <label>Username </label>
+        <input type="text" id="login" class="fadeIn second" formControlName="username" >
+        <label>Password </label>
+        <input type="text" id="password" class="fadeIn third" formControlName="password">
+        <input type="submit" class="fadeIn fourth submit_button" value="Log In">
+        <a routerLinkActive="active" 
+       routerLink="/main">Login</a> |
+      </form>   -->
+      <form (ngSubmit)="onSignin(f)" #f="ngForm">
+      
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" [(ngModel)]="model.username" #username="ngModel" class="form-control fadeIn second" required>
+          <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+            <div *ngIf="username.errors.required">User Name is required</div>
+          </div>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="model.password" #password="ngModel" minlength="6"
+            class="form-control fadeIn third" required>
+            <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+              <div *ngIf="password.errors.required">Password is required</div>
+              <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+          </div>
+        
+        <button class="btn btn-primary" type="submit" class="fadeIn fourth submit_button" [disabled]="!f.valid">Sign In</button>        
+      </form>
+    </div>
+  </div>
